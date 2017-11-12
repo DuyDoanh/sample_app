@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Chapter4</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <title><%= yield(:title) %> <%= t ("layout.title")%></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", media: "all",
+                                                  "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
