@@ -30,13 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-
     hello: "Hello world"
     layout:
       title: "| Ruby on Rails Tutorial Sample App"
     static_pages:
       home:
-        hello: "Sample App"
+        hello: "Welcome to the Sample App"
         title: "Home"
         link1: "Ruby on Rails Tutorial"
         descrip1: "This is the home page for the"
@@ -64,3 +63,20 @@ en:
         title: "Contact"
         descrip1: "Contact the Ruby on Rails Tutorial about the sample app at the"
         link1: "contact page"
+    users:
+      new:
+        title: "Sign up"
+        descrip1: "Sign up"
+    layouts:
+      footer:
+        descrip1: "Ruby on Rails Tutorial"
+        descrip2: "Michael Hartl"
+        descrip3: "News"
+        link1: "About"
+        link2: "Contact"
+      header:
+        link1: "sample app"
+        link2: "Home"
+        link3: "Help"
+        link4: "Sign up"
+
