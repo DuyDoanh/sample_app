@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
   before_action :find_user, except: %i(index new create)
-
   def index
     @users = User.paginate page: params[:page]
   end
@@ -21,9 +20,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t "controllers.users_controller.welcome"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "controllers.users_controller.please_check_email"
+      redirect_to root_url
     else
       render :new
     end
@@ -60,11 +59,10 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t "controllers.users_controller.please_login"
-      redirect_to login_url
-    end
+    return if logged_in?
+    store_location
+    flash[:danger] = t "controllers.users_controller.please_login"
+    redirect_to login_url
   end
 
   def correct_user
