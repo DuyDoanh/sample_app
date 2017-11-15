@@ -18,7 +18,7 @@ class MicropostsController < ApplicationController
       flash[:success] = t "microposts_controller.mcr_delete"
       redirect_to request.referer || root_url
     else
-      flash[:danger] =  t "microposts_controller.mcr_delete_error"
+      flash[:danger] = t "microposts_controller.mcr_delete_error"
       redirect_to root_url
     end
   end

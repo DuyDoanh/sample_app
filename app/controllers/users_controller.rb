@@ -46,10 +46,25 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def following
+    @title = t "controllers.users_controller.following"
+    @users = @user.following.paginate page: params[:page]
+    render :show_follow
+  end
+
+  def followers
+    @title = t "controllers.users_controller.followers"
+    @users = @user.followers.paginate page: params[:page]
+    render :show_follow
+  end
+
   private
 
   def find_user
     @user = User.find_by id: params[:id]
+    return if @user
+    flash[:danger] = t "controllers.users_controller.announce"
+    redirect_to signup_path
   end
 
   def user_params

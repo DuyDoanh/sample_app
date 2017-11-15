@@ -16,3 +16,5 @@
     size_img: 5
   user_info:
     size: 50
+  show_follow:
+    size: 30
