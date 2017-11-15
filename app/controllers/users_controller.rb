@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
   def show
     @user = User.find_by id: params[:id]
-    if @user.nil?
-      flash[:danger] = I18n.t "announce1"
-      redirect_to root_path
-    end
+    return if @user
+    flash[:danger] = I18n.t "controllers.users_controller.announce"
+    redirect_to root_path
   end
 
   def new
@@ -12,9 +11,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @use = User.new user_params
+    @user = User.new user_params
     if @user.save
-      flash[:success] = I18n.t "announce2"
+      log_in @user
+      flash[:success] = I18n.t "controllers.users_controller.welcome"
       redirect_to @user
     else
       render :new
