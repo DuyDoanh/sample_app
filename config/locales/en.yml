@@ -41,6 +41,9 @@ en:
         link1: "Ruby on Rails Tutorial"
         descrip1: "This is the home page for the"
         descrip2: "sample application."
+        micropost_feed: "Micropost Feed"
+        sign_up: "Sign up now!"
+        rails_logo: "Rails logo"
       help:
         hello: "Sample App"
         title: "Help"
@@ -73,6 +76,7 @@ en:
         create_account: "Create my account"
       show:
         descrip1: "The form contains"
+        micropost: "Microposts"
       edit:
         btn_text: "Save changes"
         update_profile: "Update your profile"
@@ -125,6 +129,8 @@ en:
         password_rs: "Password has been reset."
         password_expired: "Password reset has expired."
         user_invalid: "User invalid"
+      application_controller:
+        please_login: "Please log in."
     sessions:
       new:
         title1: "Login"
@@ -158,3 +164,28 @@ your password will stay as it is."
       new:
         forgot_pass: "Forgot password"
         submit: "Submit"
+        hi: "Hi %{name}"
+        welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+    user_info:
+      view_profile: "view my profile"
+      micropost: micropost"
+    micropost_form:
+      compose_new: "Compose new micropost..."
+      post: "Post"
+      picture_type: "image/jpeg,image/gif,image/png"
+      danger_maximum: "Maximum file size is 5MB. Please choose a smaller file."
+      change: "change"
+      mcr_picture: "#micropost_picture"
+      error_messages:
+      contain: "The form contains"
+    microposts_controller:
+      mcr_create: "Micropost created!"
+      mcr_delete: "Micropost deleted"
+      mcr_delete_error: "Micropost deleted error"
+    microposts:
+      micropost:
+        posted_ago: "Posted %{time} ago"
+        you_sure: "You sure?"
+    models:
+      micropost:
+        advice: "should be less than 5MB"
