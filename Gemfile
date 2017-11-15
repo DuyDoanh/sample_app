@@ -12,6 +12,9 @@ gem "bootstrap-sass", "3.3.7"
 gem "bcrypt", "3.1.11"
 gem "config"
 gem "jquery-rails"
+gem "faker", "1.7.3"
+gem "will_paginate", "3.1.5"
+gem "bootstrap-will_paginate", "1.0.0"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3"
 gem "rails-controller-testing"
@@ -22,8 +25,6 @@ gem "sass-rails", "~> 5.0"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem "therubyracer", platforms: :ruby
-
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

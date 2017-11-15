@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   def check_remember user
     log_in user
     params[:session][:remember_me] == Settings.sessions_controller.bit ? remember(user) : forget(user)
-    redirect_to user
+    redirect_back_or user
   end
 
   def flash_create_error
