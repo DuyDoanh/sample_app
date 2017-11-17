@@ -67,6 +67,10 @@ en:
       new:
         title: "Sign up"
         descrip1: "Sign up"
+        descrip2: "This will be a signup page for new users."
+        descrip3: "Confirmation"
+      show:
+        descrip1: "The form contains"
     layouts:
       footer:
         descrip1: "Ruby on Rails Tutorial"
@@ -79,4 +83,8 @@ en:
         link2: "Home"
         link3: "Help"
         link4: "Sign up"
+    controllers:
+      users_controller:
+        announce1: "Can't find user"
+        announce2: "Welcome to the Sample App!"
 
