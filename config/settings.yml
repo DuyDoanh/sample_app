@@ -4,3 +4,5 @@
     minimum_pass: 6
   users_helper:
     size: 80
+  sessions_controller:
+    bit: "1"
