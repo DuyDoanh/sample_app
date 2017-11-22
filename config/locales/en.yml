@@ -72,6 +72,14 @@ en:
         create_account: "Create my account"
       show:
         descrip1: "The form contains"
+      edit:
+        btn_text: "Save changes"
+        update_profile: "Update your profile"
+      index:
+        all_users: "All users"
+      user:
+        you_sure: "You sure?"
+        delete: "Delete"
     layouts:
       footer:
         descrip1: "Ruby on Rails Tutorial"
@@ -93,6 +101,10 @@ en:
       users_controller:
         announce: "Can't find user"
         welcome: "Welcome to the Sample App!"
+        profile_update: "Profile updated"
+        user_delete: "User deleted"
+        user_delete_error: "User deleted error"
+        please_login: "Please log in."
       sessions_controller:
         danger_invalid: "Invalid email/password combination"
     sessions:
