@@ -3,3 +3,4 @@
 <p><%= t "user_mailer.account_activation.welcom" %></p>
 <%= link_to t("user_mailer.account_activation.activate"),
   edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
