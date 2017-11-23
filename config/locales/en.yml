@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+    active_email: "Welcome to the Sample App! Click on the link below to activate your account:"
     hello: "Hello world"
     layout:
       title: "Ruby on Rails Tutorial Sample App"
@@ -75,6 +76,7 @@ en:
       edit:
         btn_text: "Save changes"
         update_profile: "Update your profile"
+        edit_user: "Edit user"
       index:
         all_users: "All users"
       user:
@@ -105,8 +107,15 @@ en:
         user_delete: "User deleted"
         user_delete_error: "User deleted error"
         please_login: "Please log in."
+        please_check_email: "Please check your email to activate your account."
       sessions_controller:
         danger_invalid: "Invalid email/password combination"
+        account_not_activate: "Account not activated."
+        check_email_activation: "Check your email for the activation link. Invalid email/password combination"
+      account_activations_controller:
+        account_activated: "Account activated!"
+        account_not_activate: "Account not activated."
+        invalid_activation: "Invalid activation link"
     sessions:
       new:
         title1: "Login"
@@ -114,4 +123,12 @@ en:
         title3: "Login"
         title4: "Sign up now!"
         title_remember: "Remember me on this computer"
-
+    mailers:
+      user_mailer:
+        account_activation: "Account activation"
+    user_mailer:
+      account_activation:
+        sample_app: "Sample App"
+        activate: "Activate"
+        hi: "Hi %{name}"
+        welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
