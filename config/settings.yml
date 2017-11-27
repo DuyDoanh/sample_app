@@ -10,4 +10,9 @@
     bit: "1"
   email:
     from: "noreply@example.com"
-
+  micropost:
+    size: 140
+    size_avata: 50
+    size_img: 5
+  user_info:
+    size: 50

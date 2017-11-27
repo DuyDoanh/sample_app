@@ -8,9 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    return if @user
-    flash[:danger] = t "controllers.users_controller.announce"
-    redirect_to root_path
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
@@ -51,7 +49,7 @@ class UsersController < ApplicationController
   private
 
   def find_user
-    @user = User.find_by params[:id]
+    @user = User.find_by id: params[:id]
   end
 
   def user_params
@@ -66,7 +64,7 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find_by params[:id]
+    @user = User.find_by id: params[:id]
     redirect_to root_url unless current_user? @user
   end
 
