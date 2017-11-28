@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
   end
 
   def login_user_invalid
-    flash.now[:danger] = t "controllers.sessions_controller.invalid_email_password"
+    flash.now[:danger] = t "controllers.sessions_controller.danger_invalid"
     render :new
   end
 
